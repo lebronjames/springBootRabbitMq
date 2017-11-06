@@ -1,0 +1,27 @@
+package com.example.demo.mq;
+
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+
+/**
+ * RabbitMQ的配置类
+ * 用来配置队列、交换器、路由等高级信息
+* 
+* 项目名称:  springBootRabbitMq
+* 包:       com.example.demo.mq   
+* 类名称:    RabbitConfig.java
+* 类描述:    
+* 创建人:    yzx 
+* 创建时间:  2017年11月2日
+ */
+@Configuration
+public class RabbitConfig {
+
+	@Bean
+	public Queue helloQueue() {
+		return new Queue("hello");
+	}
+}
